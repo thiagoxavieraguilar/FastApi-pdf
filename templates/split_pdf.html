@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-3">
+    <form enctype="multipart/form-data" action="/split_pdf" method="post">
+        <h2>Separando PDFs</h2>
+        <div class="mb-3 mt-3">
+            <label>Arquivo:</label><br>
+            <input type="file" class="form-control-file" name="pdf_file" accept="application/pdf" required />
+        <div class="mb-3 mt-3">
+            <label for="foutpou_name">Nome do arquivo de saída:</label>
+            <input type="text" id="foutpou_name" name="output_file_name" />
+        </div>
+        <button type="submit" class="btn btn-primary">Separar os pdfs</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-3">
+    <form enctype="multipart/form-data" action="/join_pdf" method="post">
+        <h2>Juntando dois arquivos PDFs</h2>
+        <div class="mb-3 mt-3">
+            <label>Primeiro arquivo:</label><br>
+            <input type="file" class="form-control-file" name="pdf_files" accept="application/pdf" required />
+        </div>
+        <div class="mb-3 mt-3">
+            <label>Segundo arquivo:</label><br>
+            <input type="file" class="form-control-file" name="pdf_files" accept="application/pdf" required />
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="foutpou_name">Nome do arquivo de saída:</label>
+            <input type="text" id="foutpou_name" name="output_file_name" />
+        </div>
+        <button type="submit" class="btn btn-primary">Juntar os pdfs</button>
+    </form>
+</div>
+{% endblock %}
